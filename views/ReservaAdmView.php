@@ -14,10 +14,10 @@ echo $header;
         <span class="fs-3"><span class="text-primary"><i class="bi bi-calendar-check me-2"></i></span><strong>Gerenciamento de Reservas</strong></span>
       </div>
       <div class="col-md-6 text-end">
-        <a href="<?= $baseUrl ?>/reserva/nova" class="btn btn-sm btn-primary btns">
+        <a href="<?= $baseUrl ?>/reserva/nova" class="btn btn-sm btn-primary btns fw-semibold">
           <b><i class="bi bi-plus-circle me-1"></i></b>Nova Reserva
         </a>
-        <a href="<?= $baseUrl ?>/reserva" class="btn btn-sm btn-info btns" target="_blank">
+        <a href="<?= $baseUrl ?>/reserva" class="btn btn-sm btn-info btns fw-semibold text-white" target="_blank">
           <b><i class="bi bi-eye me-1"></i></b>Ver Site
         </a>
       </div>
@@ -100,7 +100,7 @@ echo $header;
         <div class="table-responsive">
           <table class="table table-striped table-hover">
             <thead>
-              <tr>
+              <tr class="text-center">
                 <th>ID</th>
                 <th>Cliente</th>
                 <th>Contato</th>
@@ -113,7 +113,7 @@ echo $header;
             </thead>
             <tbody>
               <?php foreach ($lista_reservas as $reserva): ?>
-                <tr>
+                <tr class="text-center">
                   <td><?= $reserva['idReserva'] ?></td>
                   <td><?= htmlspecialchars($reserva['nome']) ?></td>
                   <td>
@@ -159,31 +159,41 @@ echo $header;
                   </td>
                   <td>
                     <div class="btn-group" role="group">
-                      <a href="<?= $baseUrl ?>/reserva/editar/<?= $reserva['idReserva'] ?>" 
-                         class="btn btn-sm btn-outline-primary" title="Editar">
+                      <a href="<?= $baseUrl ?>/reserva/editar/<?= $reserva['idReserva'] ?>"
+                        class="btn btn-sm btn-outline-primary" title="Editar">
                         <i class="bi bi-pencil"></i>
                       </a>
-                      
+
                       <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" 
-                                data-bs-toggle="dropdown" title="Status">
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                          data-bs-toggle="dropdown" title="Status">
                           <i class="bi bi-gear"></i>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="<?= $baseUrl ?>/reserva/atualizar_status/<?= $reserva['idReserva'] ?>" 
-                                 onclick="return confirm('Confirmar reserva?')">
-                            <i class="bi bi-check-circle text-success me-2"></i>Confirmar
-                          </a></li>
-                          <li><a class="dropdown-item" href="<?= $baseUrl ?>/reserva/atualizar_status/<?= $reserva['idReserva'] ?>" 
-                                 onclick="return confirm('Cancelar reserva?')">
-                            <i class="bi bi-x-circle text-danger me-2"></i>Cancelar
-                          </a></li>
+                          <li>
+                            <form action="<?= $baseUrl ?>/reserva/atualizar_status/<?= $reserva['idReserva'] ?>" method="POST"
+                              onsubmit="return confirm('Confirmar reserva?')">
+                              <input type="hidden" name="status" value="confirmada">
+                              <button type="submit" class="dropdown-item">
+                                <i class="bi bi-check-circle text-success me-2"></i>Confirmar
+                              </button>
+                            </form>
+                          </li>
+                          <li>
+                            <form action="<?= $baseUrl ?>/reserva/atualizar_status/<?= $reserva['idReserva'] ?>" method="POST"
+                              onsubmit="return confirm('Cancelar reserva?')">
+                              <input type="hidden" name="status" value="cancelada">
+                              <button type="submit" class="dropdown-item">
+                                <i class="bi bi-x-circle text-danger me-2"></i>Cancelar
+                              </button>
+                            </form>
+                          </li>
                         </ul>
                       </div>
-                      
-                      <a href="<?= $baseUrl ?>/reserva/excluir/<?= $reserva['idReserva'] ?>" 
-                         class="btn btn-sm btn-outline-danger" title="Excluir"
-                         onclick="return confirm('Tem certeza que deseja excluir esta reserva?')">
+
+                      <a href="<?= $baseUrl ?>/reserva/excluir/<?= $reserva['idReserva'] ?>"
+                        class="btn btn-sm btn-outline-danger" title="Excluir"
+                        onclick="return confirm('Tem certeza que deseja excluir esta reserva?')">
                         <i class="bi bi-trash"></i>
                       </a>
                     </div>

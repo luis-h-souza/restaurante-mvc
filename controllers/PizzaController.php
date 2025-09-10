@@ -2,7 +2,7 @@
 
 class PizzaController 
 {
-  private $baseUrl = "http://localhost/restaurante-mvc";
+  private $baseUrl = "http://localhost:8080";
   # endereço da API
   private $endpoint = "https://limeiraweb.com.br/api/pizzas/";
   

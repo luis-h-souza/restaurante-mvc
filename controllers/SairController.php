@@ -1,18 +1,16 @@
 <?php
 
-class SairController {
-
+class SairController
+{
   public $baseUrl = "http://localhost:8080";
 
-  public function index() {
+  public function index()
+  {
 
-    # inicia a sessão para poder destruí-la
-    session_start();
-
-    # remove todas as variáveis de sessão
+    // Remove todas as variáveis de sessão
     $_SESSION = array();
 
-    # remove os cookies de autenticação se existirem
+    // Remove os cookies de autenticação se existirem
     if (isset($_COOKIE['usuario'])) {
       setcookie('usuario', '', time() - 3600, "/");
     }
@@ -20,11 +18,11 @@ class SairController {
       setcookie('nivelAcesso', '', time() - 3600, "/");
     }
 
-    # remove todas as sessões ativas
+    // Remove todas as sessões ativas
     session_destroy();
 
-    # redireciona para o login
-    header("location:" . $this->baseUrl . "/login");
+    // Redireciona para o login
+    header("Location: " . $this->baseUrl . "/login");
+    exit;
   }
-
 }

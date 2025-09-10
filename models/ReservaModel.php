@@ -16,7 +16,8 @@ class Reserva
   }
 
   # criar um método para retornar todas as reservas
-  public function getAllReservas() {
+  public function getAllReservas()
+  {
     $sql = $this->db->prepare("
       SELECT r.*, m.lugares, m.tipo 
       FROM reservas r 
@@ -28,11 +29,12 @@ class Reserva
   }
 
   # método para retornar uma reserva específica
-  public function getById($idReserva) {
+  public function getById($idReserva)
+  {
     $sql = $this->db->prepare("
       SELECT r.*, m.lugares, m.tipo 
       FROM reservas r 
-      LEFT JOIN mesas m ON r.idMesa = m.id 
+      LEFT JOIN mesas m ON r.idMesa = m.id
       WHERE r.idReserva = ?
     ");
     $sql->execute([$idReserva]);
@@ -40,7 +42,8 @@ class Reserva
   }
 
   # método para retornar reservas por data
-  public function getByDate($data) {
+  public function getByDate($data)
+  {
     $sql = $this->db->prepare("
       SELECT r.*, m.lugares, m.tipo 
       FROM reservas r 
@@ -53,7 +56,13 @@ class Reserva
   }
 
   # método para verificar disponibilidade de mesa
-  public function checkDisponibilidade($data, $hora, $numeroPessoas) {
+  public function checkDisponibilidade($data, $hora, $numeroPessoas)
+  {
+    // Converter data de dd/mm/yyyy para yyyy-mm-dd, se necessário
+    if (preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $data)) {
+      $data = DateTime::createFromFormat('d/m/Y', $data)->format('Y-m-d');
+    }
+
     $sql = $this->db->prepare("
       SELECT m.* 
       FROM mesas m 
@@ -72,7 +81,8 @@ class Reserva
   }
 
   # método para criar nova reserva
-  public function insert($nome, $email, $telefone, $dataReserva, $horaReserva, $numeroPessoas, $idMesa, $observacoes) {
+  public function insert($nome, $email, $telefone, $dataReserva, $horaReserva, $numeroPessoas, $idMesa, $observacoes)
+  {
     $sql = $this->db->prepare("
       INSERT INTO reservas (nome, email, telefone, data_reserva, hora_reserva, numero_pessoas, idMesa, observacoes, status) 
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pendente')
@@ -81,7 +91,8 @@ class Reserva
   }
 
   # método para atualizar reserva
-  public function update($idReserva, $nome, $email, $telefone, $dataReserva, $horaReserva, $numeroPessoas, $idMesa, $observacoes, $status) {
+  public function update($idReserva, $nome, $email, $telefone, $dataReserva, $horaReserva, $numeroPessoas, $idMesa, $observacoes, $status)
+  {
     $sql = $this->db->prepare("
       UPDATE reservas 
       SET nome=?, email=?, telefone=?, data_reserva=?, hora_reserva=?, numero_pessoas=?, idMesa=?, observacoes=?, status=? 
@@ -91,19 +102,22 @@ class Reserva
   }
 
   # método para atualizar status da reserva
-  public function updateStatus($idReserva, $status) {
+  public function updateStatus($idReserva, $status)
+  {
     $sql = $this->db->prepare("UPDATE reservas SET status=? WHERE idReserva=?");
     return $sql->execute([$status, $idReserva]);
   }
 
   # método para excluir reserva
-  public function delete($idReserva) {
+  public function delete($idReserva)
+  {
     $sql = $this->db->prepare("DELETE FROM reservas WHERE idReserva=?");
     return $sql->execute([$idReserva]);
   }
 
   # método para obter estatísticas
-  public function getEstatisticas() {
+  public function getEstatisticas()
+  {
     $sql = $this->db->query("
       SELECT 
         COUNT(*) as total_reservas,

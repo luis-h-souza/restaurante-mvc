@@ -22,7 +22,7 @@ $status_view = "";
   # cria os cards HTML com os dados das mesas
   $card_cardapio = "
     <div class='card shadow'>
-      <img src='$foto' class='card-img-top' alt='..'>
+      <img src='$foto' class='card-img-top img-avaliacao' alt='..'>
       <div class='card-body'>
         Nome: <strong>$nome</strong>
         <br>

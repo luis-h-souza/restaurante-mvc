@@ -18,10 +18,10 @@
 
          <div class="row d-flex justify-content-center">
             <div class="col-md-5">
-               <p class="text-center fs-3"><b>Restaurante <span class="text-primary">MVC</span></b></p>
+               <p class="text-center fs-1"><b>Restaurante <span class="text-primary">MVC</span></b></p>
                <div class="card mb-4 rounded-3 shadow-sm my-4">
-                  <div class="card-header bg-secondary py-3">
-                     <h4 class="my-0 fw-normal text-white fw-bolder"><i class="bi bi-door-open me-2"></i>Login</h4>
+                  <div class="card-header bgd-primary py-3">
+                     <h4 class="my-0 fw-semibold text-white fs-2"><i class="bi bi-door-open me-2"></i>Login</h4>
                   </div>
                   <div class="card-body p-4">
 
@@ -32,17 +32,17 @@
                      <form id="form1" name="form1" method="post" action="<?= $baseUrl ?>/login/autenticar">
                         <div class="form-floating mb-4">
                            <input type="usuario" name="usuario" id="usuario" class="form-control">
-                           <label for="usuario"><i class="bi bi-person"></i>&nbsp;Usuário:</label>
+                           <label class="text-primary " for="usuario"><i class="bi bi-person text-primary"></i>&nbsp;Usuário:</label>
                         </div>
-                        <div class="form-floating mb-4">
+                        <div class="form-floating d-flex align-items-center">
                            <input type="password" name="senha" id="senha" class="form-control">
-                           <label for="senha"><i class="bi bi-key"></i>&nbsp;Senha</label>
+                           <label class="text-center text-primary " for="senha"><i class="bi bi-key text-primary"></i>&nbsp;Senha</label>
                         </div>
-                        <div class="form-floating mb-4">
-                              <input type="checkbox" name="manter_logado" id="manter_logado" value="1" class="form-check-input">&nbsp;&nbsp;Manter logado
+                        <div class="form-floating my-4">
+                              <input type="checkbox" name="manter_logado" id="manter_logado" value="1" class="form-check-input">&nbsp;&nbsp;<span>Manter logado</span>
                         </div>
                         
-                        <button type="submit" id="btnAcessar" name="btnAcessar" class="w-100 btn btn-lg btn-primary">Acessar<i class="bi bi-arrow-right ms-2"></i></button>
+                        <button type="submit" id="btnAcessar" name="btnAcessar" class="fw-semibold w-100 btn btn-lg btn-primary">Acessar<i class="bi bi-arrow-right ms-2"></i></button>
                         
                      </form>
 

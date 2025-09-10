@@ -12,11 +12,11 @@ echo $header;
     <div class="row">
       <div class="col-md-8 mx-auto">
         <div class="card shadow">
-          <div class="card-header bg-primary text-white">
+          <div class="card-header bgd-primary text-white">
             <h2 class="mb-0"><i class="bi bi-calendar-check me-2"></i>Faça sua Reserva</h2>
           </div>
           <div class="card-body">
-            
+
             <?php if (isset($_GET['sucesso']) && $_GET['sucesso'] == '1'): ?>
               <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <i class="bi bi-check-circle me-2"></i>
@@ -41,7 +41,7 @@ echo $header;
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="email" class="form-label">E-mail *</label>
-                  <input type="email" class="form-control" id="email" name="email" required>
+                  <input type="email" class="form-control" id="email" name="email">
                 </div>
               </div>
 
@@ -114,44 +114,45 @@ echo $header;
 </main>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const dataInput = document.getElementById('data_reserva');
-  const horaInput = document.getElementById('hora_reserva');
-  const pessoasInput = document.getElementById('numero_pessoas');
-  const disponibilidadeDiv = document.getElementById('disponibilidade');
-  const disponibilidadeTexto = document.getElementById('disponibilidade-texto');
+  document.addEventListener('DOMContentLoaded', function() {
+    const dataInput = document.getElementById('data_reserva');
+    const horaInput = document.getElementById('hora_reserva');
+    const pessoasInput = document.getElementById('numero_pessoas');
+    const disponibilidadeDiv = document.getElementById('disponibilidade');
+    const disponibilidadeTexto = document.getElementById('disponibilidade-texto');
 
-  function verificarDisponibilidade() {
-    const data = dataInput.value;
-    const hora = horaInput.value;
-    const pessoas = pessoasInput.value;
+    function verificarDisponibilidade() {
+      let dia = dataInput.value;
+      const hora = horaInput.value;
+      const pessoas = pessoasInput.value;
 
-    if (data && hora && pessoas) {
-      fetch('<?= $baseUrl ?>/reserva/verificar_disponibilidade', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `data=${data}&hora=${hora}&numero_pessoas=${pessoas}`
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.disponivel) {
-          disponibilidadeTexto.innerHTML = `✅ Mesas disponíveis para ${pessoas} pessoa(s) em ${data} às ${hora}`;
-          disponibilidadeDiv.className = 'alert alert-success';
-        } else {
-          disponibilidadeTexto.innerHTML = `❌ Não há mesas disponíveis para ${pessoas} pessoa(s) em ${data} às ${hora}`;
-          disponibilidadeDiv.className = 'alert alert-danger';
-        }
-        disponibilidadeDiv.style.display = 'block';
-      });
+      if (dia && hora && pessoas) {
+        fetch('<?= $baseUrl ?>/reserva/verificar_disponibilidade', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `data=${dia}&hora=${hora}&numero_pessoas=${pessoas}`
+          })
+          .then(response => response.json())
+          .then(data => {
+            dia = dia.split('-').reverse().join('/');
+            if (data.disponivel) {
+              disponibilidadeTexto.innerHTML = `✅ Mesas disponíveis para <b>${pessoas}</b> pessoa(s) em <b>${dia}</b> às <b>${hora}</b>`;
+              disponibilidadeDiv.className = 'alert alert-success';
+            } else {
+              disponibilidadeTexto.innerHTML = `❌ Não há mesas disponíveis para <b>${pessoas}</b> pessoa(s) em <b>${dia}</b> às <b>${hora}</b>`;
+              disponibilidadeDiv.className = 'alert alert-danger';
+            }
+            disponibilidadeDiv.style.display = 'block';
+          });
+      }
     }
-  }
 
-  dataInput.addEventListener('change', verificarDisponibilidade);
-  horaInput.addEventListener('change', verificarDisponibilidade);
-  pessoasInput.addEventListener('change', verificarDisponibilidade);
-});
+    dataInput.addEventListener('change', verificarDisponibilidade);
+    horaInput.addEventListener('change', verificarDisponibilidade);
+    pessoasInput.addEventListener('change', verificarDisponibilidade);
+  });
 </script>
 
 <?php

@@ -1,13 +1,13 @@
 <?php
 
-$lista ="";
+$lista = "";
 
 # itera sobre o array que foi criado com o controller e que contém os dados das mesas
 foreach ($lista_cardapio as $cardapio) {
   $idCardapio = $cardapio['idCardapio'];
   $nome = $cardapio['nome'];
   # number_format(valor, casas decimais, separador decimal, separador milhar)
-  $preco = number_format($cardapio['preco'],2,",",".");
+  $preco = number_format($cardapio['preco'], 2, ",", ".");
   $descricao = $cardapio['descricao'];
   $foto = $cardapio['foto'];
 
@@ -17,15 +17,19 @@ foreach ($lista_cardapio as $cardapio) {
 
   <div class='col-md-4 mb-4'>
     <div class='card shadow'>
-      <img src='$foto' class='card-img-top' alt='..'>
+      <img src='$foto' class='card-img-top fixed-img' alt='..'>
       <div class='card-body'>
         Nome: <strong>$nome</strong>
         <br>
         Preço: <strong>R$ $preco</strong>
-        <br
+        <br>
         <strong>$descricao</strong>
         <br>
-        <a class='text-decoration-none my-2' href='[[base-url]]/avaliacoes/listar/$idCardapio'>Avaliações</a>
+        <span class='d-flex justify-content-end fs-5'>
+          <a class='badge bg-primary text-decoration-none m-2' href='[[base-url]]/avaliacoes/listar/$idCardapio'>
+            Avaliações
+          </a>
+        </span> 
       </div>
     </div>
   </div>

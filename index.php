@@ -16,7 +16,9 @@ $segmentos = explode("/", $requisicao);
 
 # verifica o padrão da rota utilizando o array $segmentos explodido
 # Remove elementos vazios do array
-$segmentos = array_filter($segmentos, function($value) { return $value !== ''; });
+$segmentos = array_filter($segmentos, function ($value) {
+  return $value !== '';
+});
 $segmentos = array_values($segmentos); // Reindexa o array
 
 $controlador = isset($segmentos[0]) ? $segmentos[0] : "mesa-adm";
@@ -36,21 +38,94 @@ switch ($controlador) {
     validaSessao();
     require "controllers/MesaController.php";
     $controller = new MesaController();
-    // $controller -> index();
     break;
 
   case 'cardapio-adm':
     validaSessao();
     require "controllers/CardapioController.php";
     $controller = new CardapioController();
-    // $controller -> index();
+    break;
+
+  case 'reserva-adm':
+    validaSessao();
+    require "controllers/ReservaController.php";
+    $controller = new ReservaController();
+    $controller->adm(); // Assuma que este método existe para listar reservas admin
+    break;
+
+  case 'reserva-editar':
+    validaSessao();
+    require "controllers/ReservaController.php";
+    $controller = new ReservaController();
+    if (isset($params[0])) {
+      $controller->editar($params[0]);
+    } else {
+      $_SESSION['error'] = "ID da reserva não fornecido.";
+      header("Location: $baseUrl/reserva/adm");
+    }
+    break;
+
+  case 'reserva-atualizar':
+    validaSessao();
+    require "controllers/ReservaController.php";
+    $controller = new ReservaController();
+    if (isset($params[0])) {
+      $controller->atualizar($params[0]);
+    } else {
+      $_SESSION['error'] = "ID da reserva não fornecido.";
+      header("Location: $baseUrl/reserva/adm");
+    }
+    break;
+
+  case 'reserva-verificar_disponibilidade':
+    require "controllers/ReservaController.php";
+    $controller = new ReservaController();
+    $controller->verificar_disponibilidade();
     break;
 
   case 'avaliacoes-adm':
     validaSessao();
     require "controllers/AvaliacaoController.php";
     $controller = new AvaliacaoController();
-    // $controller -> index();
+    break;
+
+  case 'usuario-adm':
+    validaSessao();
+    require "controllers/UsuarioController.php";
+    $controller = new UsuarioController();
+    break;
+
+  case 'usuario-adm-criar':
+    validaSessao();
+    require "controllers/UsuarioController.php";
+    $controller = new UsuarioController();
+    $controller->criar();
+    break;
+
+  case 'usuario-adm-inserir':
+    validaSessao();
+    require "controllers/UsuarioController.php";
+    $controller = new UsuarioController();
+    $controller->inserir();
+    break;
+
+  case 'usuario-adm-editar':
+    validaSessao();
+    require "controllers/UsuarioController.php";
+    $controller = new UsuarioController();
+    if (isset($params[0]) && is_numeric($params[0])) {
+      $controller->editar($params[0]);
+    } else {
+      $_SESSION['error'] = "ID do usuário inválido.";
+      header("Location: $baseUrl/usuario-adm");
+    }
+    break;
+
+  case 'usuario-adm-atualizar':
+    validaSessao();
+    require "controllers/UsuarioController.php";
+    $controller = new UsuarioController();
+    $controller->atualizar();
     break;
 
   case 'avaliacoes':
@@ -85,14 +160,8 @@ switch ($controlador) {
     break;
 
   case 'sair':
-    require "controllers/sairController.php";
+    require "controllers/SairController.php";
     $controller = new SairController();
-    break;
-
-  case 'usuario-adm':
-    validaSessao();
-    require "controllers/UsuarioController.php";
-    $controller = new UsuarioController();
     break;
 
   default:
@@ -116,7 +185,7 @@ function validaSessao()
   $temSessao = isset($_SESSION["nome_usuario"]);
   $temCookieUsuario = isset($_COOKIE['usuario']);
   $temCookieNivel = isset($_COOKIE['nivelAcesso']);
-  
+
   # Se não tem nem sessão nem cookies, redireciona para login
   if (!$temSessao && !$temCookieUsuario && !$temCookieNivel) {
     $baseUrl = "http://localhost:8080";
