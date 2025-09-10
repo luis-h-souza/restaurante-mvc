@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# Redirecionar todas as requisições para index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Configurações de segurança
+<Files "*.env">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "docker-compose.yml">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "Dockerfile">
+    Order allow,deny
+    Deny from all
+</Files>
