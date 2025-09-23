@@ -1,6 +1,6 @@
 <?php
-$header = file_get_contents("views/templates/html/header_site.html");
-$footer = file_get_contents("views/templates/html/footer_site.html");
+$header = file_get_contents("views/templates/html/header.html");
+$footer = file_get_contents("views/templates/html/footer.html");
 $header = str_replace("[[base-url]]", $baseUrl, $header);
 $footer = str_replace("[[base-url]]", $baseUrl, $footer);
 echo $header;

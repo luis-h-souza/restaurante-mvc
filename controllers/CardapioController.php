@@ -103,7 +103,7 @@ class CardapioController
     $foto = $_POST["foto"];
 
     # verifica se algo existe (o checkbox status está marcado)
-    $status = isset($_POST["status"]) ? true : false;
+    $status = isset($_POST["status"]) ? 1 : 0;
 
     $acao = $_POST["acao"];
 

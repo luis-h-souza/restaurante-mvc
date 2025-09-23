@@ -31,7 +31,7 @@ echo $header;
           <br>
 
           <label for="lugares">Quantidade de lugares:</label>
-          <input class="form-control" type="number" name="lugares" id="lugares" min="2" max="8" value="<?= $lugares ?>" required>
+          <input class="form-control" type="number" name="lugares" id="lugares" min="1" max="10" value="<?= $lugares ?>" required>
           <br>
 
           <label for="tipo">Tipo de mesa:</label>
