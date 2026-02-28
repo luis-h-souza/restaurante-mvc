@@ -2,120 +2,127 @@
 # inclui o arquivo model
 require_once "models/CardapioModel.php";
 
-class CardapioController 
+class CardapioController
 {
-  # url é uma propriedade pois está sendo criada dentro da classe
-  # criar uma propriedade que receba o endereço absoluto do site
-  # este endereço será usado para compor as rotas
-  public $baseUrl = "http://localhost:8080";
-  
-  # cria a proprieadade que será usada nos métodos a seguir
-  private $cardapioModel;
+    # url é uma propriedade pois está sendo criada dentro da classe
+    # criar uma propriedade que receba o endereço absoluto do site
+    # este endereço será usado para compor as rotas
+    public $baseUrl = "http://localhost:8080";
 
-  public function __construct()
-  {
-    # instancia a classe Mesa para obter os dados do model
-    $this -> cardapioModel = new Cardapio;
-  }
+    # cria a proprieadade que será usada nos métodos a seguir
+    private $cardapioModel;
 
-  public function index() {
+    public function __construct()
+    {
+        # instancia a classe Mesa para obter os dados do model
+        $this->cardapioModel = new Cardapio;
+    }
 
-    # cria um array que recebe a lista de mesas que o model retornará
-    $lista_cardapio = $this -> cardapioModel -> getCardapio();
+    public function index()
+    {
 
-    # recebe o valor da propriedade $url e fica disponível para uso da view
-    $baseUrl = $this -> baseUrl;
+        # cria um array que recebe a lista de mesas que o model retornará
+        $lista_cardapio = $this->cardapioModel->getCardapio();
 
-    # importa a view que irá renderizar o template usando as variáveis acima:
-    # $lista_de_mesas (array com os dados) e $baseUrl (com o endereço da aplicação)
-    require "views/CardapioView.php";
-  }
+        # recebe o valor da propriedade $url e fica disponível para uso da view
+        $baseUrl = $this->baseUrl;
 
-  public function ver_cardapio() {
-    $lista_cardapio = $this -> cardapioModel -> getCardapio();
-    $baseUrl = $this -> baseUrl;
-    require "views/CardapioSiteView.php";
-  }
+        # importa a view que irá renderizar o template usando as variáveis acima:
+        # $lista_de_mesas (array com os dados) e $baseUrl (com o endereço da aplicação)
+        require "views/CardapioView.php";
+    }
 
-  public function ver() {
-    $lista_cardapio = $this -> cardapioModel -> getCardapio();
-    $baseUrl = $this -> baseUrl;
-    require "views/CardapioSiteView.php";
-  }
+    public function ver_cardapio()
+    {
+        $lista_cardapio = $this->cardapioModel->getCardapio();
+        $baseUrl = $this->baseUrl;
+        require "views/CardapioSiteView.php";
+    }
 
-  public function excluir($id){
-    # executa o método da classe de Mdel
-    $this -> cardapioModel -> delete($id);
-    
-    # redireciona o usuário para a listagem de mesas
-    header("location: ". $this -> baseUrl."/cardapio-adm");
-  }
+    public function ver()
+    {
+        $lista_cardapio = $this->cardapioModel->getCardapio();
+        $baseUrl = $this->baseUrl;
+        require "views/CardapioSiteView.php";
+    }
 
-  # método responsável pela rota criar (cardapio-adm/criar)
-  public function criar() {
-    $baseUrl = $this -> baseUrl;
-    $tipo = "<option></option>
-      <option>Prato quente</option>
-      <option>Prato frio</option>
-      <option>Sobremesa</option>
-      <option>Bebida</option>
-      <option>Outros</option>
+    public function excluir($id)
+    {
+        # executa o método da classe de Mdel
+        $this->cardapioModel->delete($id);
+
+        # redireciona o usuário para a listagem de mesas
+        header("location: " . $this->baseUrl . "/cardapio-adm");
+    }
+
+    # método responsável pela rota criar (cardapio-adm/criar)
+    public function criar()
+    {
+        $baseUrl = $this->baseUrl;
+        $tipo = "<option></option>
+        <option>Prato quente</option>
+        <option>Prato frio</option>
+        <option>Sobremesa</option>
+        <option>Bebida</option>
+        <option>Outros</option>
     ";
-    $nome = "";
-    $preco = "";
-    $descricao = "";
-    $foto = "";
-    $status = false;
+        $nome = "";
+        $preco = "";
+        $descricao = "";
+        $foto = "";
+        $status = false;
 
-    # variável usada para indicar ao formulário que os campos devem ficar vazios
-    $acao = "criar";
-    require "views/CardapioForm.php";
-  }
-
-  public function editar($idCardapio) {
-    $cardapio = $this -> cardapioModel -> getById($idCardapio);
-    $nome = $cardapio["nome"];
-    $preco = $cardapio["preco"];
-    $descricao = $cardapio["descricao"];
-    $foto = $cardapio["foto"];
-
-    $status = $cardapio["status"] == true ? "checked" : "";
-
-    $tipos = ["Prato quente", "Prato frio", "Sobremesa", "Bebida", "Outros"];
-    $tipo = "<option></option>";
-    foreach ($tipos as $t) {
-      $selecionado = $cardapio["tipo"] == $t ? "selected" : "";
-      $tipo .= "<option $selecionado>$t</option>";
+        # variável usada para indicar ao formulário que os campos devem ficar vazios
+        $acao = "criar";
+        require "views/CardapioForm.php";
     }
 
-    $baseUrl = $this -> baseUrl;
-    # variável usada para indicar ao formulário que os campos devem estar preenchidos
-    $acao = "editar";
-    require "views/CardapioForm.php";
-  }
+    public function editar($idCardapio)
+    {
+        $cardapio = $this->cardapioModel->getById($idCardapio);
+        $nome = $cardapio["nome"];
+        $preco = $cardapio["preco"];
+        $descricao = $cardapio["descricao"];
+        $foto = $cardapio["foto"];
 
-  # método responsável por receber os dados do formulário e enviar para o Model
-  public function atualizar() {
-    $nome = $_POST["nome"];
-    $preco = $_POST["preco"];
-    $tipo = $_POST["tipo"];
-    $descricao = $_POST["descricao"];
-    $foto = $_POST["foto"];
+        $status = $cardapio["status"] == true ? "checked" : "";
 
-    # verifica se algo existe (o checkbox status está marcado)
-    $status = isset($_POST["status"]) ? true : false;
+        $tipos = ["Prato quente", "Prato frio", "Sobremesa", "Bebida", "Outros"];
+        $tipo = "<option></option>";
+        foreach ($tipos as $t) {
+            $selecionado = $cardapio["tipo"] == $t ? "selected" : "";
+            $tipo .= "<option $selecionado>$t</option>";
+        }
 
-    $acao = $_POST["acao"];
-
-    # chama o método inserir que é rosponsável por gravar os dados na tabela
-    if ($acao == "editar") {
-      $idCardapio = $_POST["idCardapio"];
-      $this -> cardapioModel -> update($idCardapio, $nome, $preco, $tipo, $descricao, $foto, $status);
-    } else {
-      $this -> cardapioModel -> insert($nome, $preco, $tipo, $descricao, $foto, $status);
+        $baseUrl = $this->baseUrl;
+        # variável usada para indicar ao formulário que os campos devem estar preenchidos
+        $acao = "editar";
+        require "views/CardapioForm.php";
     }
 
-    # redireciona o usuáio para a rota principal de cardapio-adm
-    header("location: ". $this -> baseUrl."/cardapio-adm");
-  }
+    # método responsável por receber os dados do formulário e enviar para o Model
+    public function atualizar()
+    {
+        $nome = $_POST["nome"];
+        $preco = $_POST["preco"];
+        $tipo = $_POST["tipo"];
+        $descricao = $_POST["descricao"];
+        $foto = $_POST["foto"];
+
+        # verifica se algo existe (o checkbox status está marcado)
+        $status = isset($_POST["status"]) ? true : false;
+
+        $acao = $_POST["acao"];
+
+        # chama o método inserir que é rosponsável por gravar os dados na tabela
+        if ($acao == "editar") {
+            $idCardapio = $_POST["idCardapio"];
+            $this->cardapioModel->update($idCardapio, $nome, $preco, $tipo, $descricao, $foto, $status);
+        } else {
+            $this->cardapioModel->insert($nome, $preco, $tipo, $descricao, $foto, $status);
+        }
+
+        # redireciona o usuáio para a rota principal de cardapio-adm
+        header("location: " . $this->baseUrl . "/cardapio-adm");
+    }
 }
