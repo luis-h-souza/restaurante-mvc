@@ -1,6 +1,6 @@
 <?php
-$header = file_get_contents("views/templates/html/header_site.html");
-$footer = file_get_contents("views/templates/html/footer_site.html");
+$header = file_get_contents("views/templates/html/header.html");
+$footer = file_get_contents("views/templates/html/footer.html");
 $header = str_replace("[[base-url]]", $baseUrl, $header);
 $footer = str_replace("[[base-url]]", $baseUrl, $footer);
 
@@ -47,7 +47,7 @@ echo $header;
               <form action="<?= $baseUrl ?>/reserva/criar" method="post">
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="nome" class="form-label">Nome *</label>
+                    <label for="nome" class="form-label">Nome Completo*</label>
                     <input type="text" class="form-control" id="nome" name="nome" value="<?= htmlspecialchars($nome ?? '') ?>" required>
                   </div>
                   <div class="col-md-6 mb-3">
@@ -110,6 +110,11 @@ echo $header;
                   </div>
                 </div>
 
+                <div id="disponibilidade" class="alert alert-info" style="display: none;">
+                  <i class="bi bi-info-circle me-2"></i>
+                  <span id="disponibilidade-texto"></span>
+                </div>
+
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <a href="<?= $baseUrl ?>/reserva/adm" class="btn btn-secondary me-md-2">
                     <i class="bi bi-arrow-left me-2"></i>Voltar
@@ -118,6 +123,7 @@ echo $header;
                     <i class="bi bi-save me-2"></i>Fazer Reserva
                   </button>
                 </div>
+
               </form>
             <?php endif; ?>
           </div>
@@ -126,6 +132,48 @@ echo $header;
     </div>
   </section>
 </main>
+
+<script>
+  function criarReserva() {
+    let dia = dataInput.value;
+    const hora = horaInput.value;
+    const pessoas = pessoasInput.value;
+
+    if (dia && hora && pessoas) {
+      fetch('<?= $baseUrl ?>/reserva/criar', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `data=${dia}&hora=${hora}&numero_pessoas=${pessoas}`
+        })
+        .then(response => response.json())
+        .then(data => {
+          dia = dia.split('-').reverse().join('/');
+          if (data.sucesso) {
+            disponibilidadeTexto.innerHTML = `<p class='fs5'>✅ Reserva criada com sucesso para <b>${pessoas}</b> pessoa(s) em <b>${dia}</b> às <b>${hora}</b></p>`;
+            disponibilidadeDiv.className = 'alert alert-success';
+          } else {
+            disponibilidadeTexto.innerHTML = `❌ Erro ao criar reserva para <b>${pessoas}</b> pessoa(s) em <b>${dia}</b> às <b>${hora}</b>. ${data.mensagem || 'Tente novamente.'}`;
+            disponibilidadeDiv.className = 'alert alert-danger';
+          }
+          disponibilidadeDiv.style.display = 'block';
+        })
+        .catch(error => {
+          console.error('Erro:', error);
+          disponibilidadeTexto.innerHTML = `❌ Erro de conexão. Tente novamente.`;
+          disponibilidadeDiv.className = 'alert alert-danger';
+          disponibilidadeDiv.style.display = 'block';
+        });
+    }
+  }
+
+  // Remover os event listeners automáticos se não precisar mais da verificação em tempo real
+  // dataInput.addEventListener('change', criarReserva);
+  // horaInput.addEventListener('change', criarReserva);
+  // pessoasInput.addEventListener('change', criarReserva);
+</script>
+
 
 <?php
 echo $footer;

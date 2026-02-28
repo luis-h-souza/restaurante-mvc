@@ -50,6 +50,7 @@ echo $header;
                   <label for="telefone" class="form-label">Telefone *</label>
                   <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
                 </div>
+
                 <div class="col-md-6 mb-3">
                   <label for="numero_pessoas" class="form-label">Número de Pessoas *</label>
                   <select class="form-select" id="numero_pessoas" name="numero_pessoas" required>
@@ -105,6 +106,7 @@ echo $header;
                   <i class="bi bi-calendar-check me-2"></i>Fazer Reserva
                 </button>
               </div>
+
             </form>
           </div>
         </div>
