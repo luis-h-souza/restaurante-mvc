@@ -4,36 +4,36 @@ $lista = "";
 
 # itera sobre o array que foi criado com o controller e que contém os dados das mesas
 foreach ($lista_cardapio as $cardapio) {
-  $idCardapio = $cardapio['idCardapio'];
-  $nome = $cardapio['nome'];
-  # number_format(valor, casas decimais, separador decimal, separador milhar)
-  $preco = number_format($cardapio['preco'], 2, ",", ".");
-  $descricao = $cardapio['descricao'];
-  $foto = $cardapio['foto'];
+    $idCardapio = $cardapio['idCardapio'];
+    $nome = $cardapio['nome'];
+    # number_format(valor, casas decimais, separador decimal, separador milhar)
+    $preco = number_format($cardapio['preco'], 2, ",", ".");
+    $descricao = $cardapio['descricao'];
+    $foto = $cardapio['foto'];
 
 
-  # cria os cards HTML com os dados das mesas
-  $lista .= "
+    # cria os cards HTML com os dados das mesas
+    $lista .= "
 
-  <div class='col-md-4 mb-4'>
-    <div class='card shadow'>
-      <img src='$foto' class='card-img-top fixed-img' alt='..'>
-      <div class='card-body'>
-        Nome: <strong>$nome</strong>
-        <br>
-        Preço: <strong>R$ $preco</strong>
-        <br>
-        <strong>$descricao</strong>
-        <br>
-        <span class='d-flex justify-content-end fs-5'>
-          <a class='badge bg-primary text-decoration-none m-2' href='[[base-url]]/avaliacoes/listar/$idCardapio'>
-            Avaliações
-          </a>
-        </span> 
-      </div>
+    <div class='col-md-4 mb-4'>
+        <div class='card shadow'>
+        <img src='$foto' class='card-img-top fixed-img' alt='..'>
+        <div class='card-body'>
+            Nome: <strong>$nome</strong>
+            <br>
+            Preço: <strong>R$ $preco</strong>
+            <br>
+            <strong>$descricao</strong>
+            <br>
+            <span class='d-flex justify-content-end fs-5'>
+            <a class='badge bg-primary text-decoration-none m-2' href='[[base-url]]/avaliacoes/listar/$idCardapio'>
+                Avaliações
+            </a>
+            </span> 
+        </div>
+        </div>
     </div>
-  </div>
-  ";
+    ";
 }
 
 # faz a leitura dos arquivos de templates e armazena nas variáveis

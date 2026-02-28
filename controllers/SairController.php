@@ -2,7 +2,7 @@
 
 class SairController
 {
-  public $baseUrl = "http://localhost:8080";
+  
 
   public function index()
   {

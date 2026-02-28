@@ -7,7 +7,7 @@ class AvaliacaoController
   # url é uma propriedade pois está sendo criada dentro da classe
   # criar uma propriedade que receba o endereço absoluto do site
   # este endereço será usado para compor as rotas
-  public $baseUrl = "http://localhost:8080";
+  
 
   # cria a proprieadade que será usada nos métodos a seguir
   private $avaliacaoModel;

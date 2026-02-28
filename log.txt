@@ -1,0 +1,278 @@
+[Tue Feb 24 19:32:38 2026] PHP 8.2.12 Development Server (http://localhost:8080) started
+[Tue Feb 24 19:34:07 2026] [::1]:53106 Accepted
+[Tue Feb 24 19:34:07 2026] [::1]:53106 [200]: GET /login
+[Tue Feb 24 19:34:07 2026] [::1]:53106 Closing
+[Tue Feb 24 19:34:07 2026] [::1]:54537 Accepted
+[Tue Feb 24 19:34:07 2026] [::1]:54537 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:34:07 2026] [::1]:54537 Closing
+[Tue Feb 24 19:35:35 2026] [::1]:61823 Accepted
+[Tue Feb 24 19:35:35 2026] [::1]:61823 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:35:35 2026] [::1]:61823 Closing
+[Tue Feb 24 19:35:35 2026] [::1]:61930 Accepted
+[Tue Feb 24 19:35:35 2026] [::1]:61930 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:35:35 2026] [::1]:61930 Closing
+[Tue Feb 24 19:37:37 2026] [::1]:53605 Accepted
+[Tue Feb 24 19:37:37 2026] [::1]:53605 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:37:37 2026] [::1]:53605 Closing
+[Tue Feb 24 19:37:37 2026] [::1]:53575 Accepted
+[Tue Feb 24 19:37:37 2026] [::1]:53575 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:37:37 2026] [::1]:53575 Closing
+[Tue Feb 24 19:40:02 2026] [::1]:49264 Accepted
+[Tue Feb 24 19:41:11 2026] [::1]:49264 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Feb 24 19:41:11 2026] [::1]:49264 Closing
+[Tue Feb 24 19:44:28 2026] [::1]:51672 Accepted
+[Tue Feb 24 19:44:28 2026] [::1]:51672 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:44:28 2026] [::1]:51672 Closing
+[Tue Feb 24 19:44:28 2026] [::1]:54868 Accepted
+[Tue Feb 24 19:44:28 2026] [::1]:54868 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:44:28 2026] [::1]:54868 Closing
+[Tue Feb 24 19:45:19 2026] [::1]:58327 Accepted
+[Tue Feb 24 19:45:19 2026] [::1]:58327 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:45:19 2026] [::1]:58327 Closing
+[Tue Feb 24 19:45:19 2026] [::1]:52141 Accepted
+[Tue Feb 24 19:45:19 2026] [::1]:52141 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:45:19 2026] [::1]:52141 Closing
+[Tue Feb 24 19:46:58 2026] [::1]:53354 Accepted
+[Tue Feb 24 19:46:58 2026] [::1]:53354 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:46:58 2026] [::1]:53354 Closing
+[Tue Feb 24 19:46:58 2026] [::1]:53039 Accepted
+[Tue Feb 24 19:46:59 2026] [::1]:53039 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:46:59 2026] [::1]:53039 Closing
+[Tue Feb 24 19:47:13 2026] [::1]:49294 Accepted
+[Tue Feb 24 19:47:13 2026] [::1]:49294 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:47:13 2026] [::1]:49294 Closing
+[Tue Feb 24 19:47:13 2026] [::1]:57184 Accepted
+[Tue Feb 24 19:47:13 2026] [::1]:57184 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:47:13 2026] [::1]:57184 Closing
+[Tue Feb 24 19:47:21 2026] [::1]:63100 Accepted
+[Tue Feb 24 19:47:21 2026] [::1]:63100 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:47:21 2026] [::1]:63100 Closing
+[Tue Feb 24 19:47:22 2026] [::1]:60250 Accepted
+[Tue Feb 24 19:47:22 2026] [::1]:60250 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:47:22 2026] [::1]:60250 Closing
+[Tue Feb 24 19:48:55 2026] [::1]:53998 Accepted
+[Tue Feb 24 19:48:55 2026] [::1]:53998 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:48:55 2026] [::1]:53998 Closing
+[Tue Feb 24 19:48:55 2026] [::1]:55869 Accepted
+[Tue Feb 24 19:48:55 2026] [::1]:55869 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:48:55 2026] [::1]:55869 Closing
+[Tue Feb 24 19:49:56 2026] [::1]:64197 Accepted
+[Tue Feb 24 19:49:56 2026] [::1]:64197 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:49:56 2026] [::1]:64197 Closing
+[Tue Feb 24 19:49:56 2026] [::1]:49190 Accepted
+[Tue Feb 24 19:49:56 2026] [::1]:49190 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:49:56 2026] [::1]:49190 Closing
+[Tue Feb 24 19:55:11 2026] [::1]:58483 Accepted
+[Tue Feb 24 19:55:11 2026] [::1]:58483 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:55:11 2026] [::1]:58483 Closing
+[Tue Feb 24 19:55:11 2026] [::1]:50982 Accepted
+[Tue Feb 24 19:55:11 2026] [::1]:50982 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:55:11 2026] [::1]:50982 Closing
+[Tue Feb 24 19:55:11 2026] [::1]:58641 Accepted
+[Tue Feb 24 19:55:11 2026] [::1]:58641 [404]: GET /favicon.ico - No such file or directory
+[Tue Feb 24 19:55:11 2026] [::1]:58641 Closing
+[Tue Feb 24 19:55:15 2026] [::1]:56917 Accepted
+[Tue Feb 24 19:55:19 2026] [::1]:56917 [200]: GET /login
+[Tue Feb 24 19:55:19 2026] [::1]:56917 Closing
+[Tue Feb 24 19:55:19 2026] [::1]:49321 Accepted
+[Tue Feb 24 19:55:19 2026] [::1]:49321 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:55:19 2026] [::1]:49321 Closing
+[Tue Feb 24 19:55:23 2026] [::1]:56101 Accepted
+[Tue Feb 24 19:55:23 2026] [::1]:49430 Accepted
+[Tue Feb 24 19:55:27 2026] [::1]:56101 [200]: GET /login
+[Tue Feb 24 19:55:27 2026] [::1]:56101 Closing
+[Tue Feb 24 19:55:27 2026] [::1]:49430 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:55:27 2026] [::1]:49430 Closing
+[Tue Feb 24 19:58:07 2026] [::1]:53587 Accepted
+[Tue Feb 24 19:58:11 2026] [::1]:53587 [200]: GET /login
+[Tue Feb 24 19:58:11 2026] [::1]:53587 Closing
+[Tue Feb 24 19:58:11 2026] [::1]:58349 Accepted
+[Tue Feb 24 19:58:15 2026] [::1]:58349 [200]: GET /login
+[Tue Feb 24 19:58:16 2026] [::1]:58349 Closing
+[Tue Feb 24 19:58:16 2026] [::1]:61938 Accepted
+[Tue Feb 24 19:58:16 2026] [::1]:61938 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:58:16 2026] [::1]:61938 Closing
+[Tue Feb 24 19:59:22 2026] [::1]:57575 Accepted
+[Tue Feb 24 19:59:40 2026] [::1]:62898 Accepted
+[Tue Feb 24 19:59:40 2026] [::1]:62898 [200]: GET /views/templates/html/notfound.html
+[Tue Feb 24 19:59:40 2026] [::1]:62898 Closing
+[Tue Feb 24 19:59:40 2026] [::1]:65466 Accepted
+[Tue Feb 24 19:59:40 2026] [::1]:65466 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 19:59:40 2026] [::1]:65466 Closing
+[Tue Feb 24 19:59:43 2026] [::1]:65506 Accepted
+[Tue Feb 24 19:59:43 2026] [::1]:56529 Accepted
+[Tue Feb 24 19:59:47 2026] [::1]:65506 [200]: GET /login
+[Tue Feb 24 19:59:47 2026] [::1]:65506 Closing
+[Tue Feb 24 19:59:57 2026] [::1]:56529 [200]: GET /login
+[Tue Feb 24 19:59:57 2026] [::1]:56529 Closing
+[Tue Feb 24 19:59:57 2026] [::1]:61262 Accepted
+[Tue Feb 24 20:00:01 2026] [::1]:61262 [200]: GET /login
+[Tue Feb 24 20:00:01 2026] [::1]:61262 Closing
+[Tue Feb 24 20:00:01 2026] [::1]:49154 Accepted
+[Tue Feb 24 20:00:01 2026] [::1]:49154 [200]: GET /views/templates/css/style.css
+[Tue Feb 24 20:00:01 2026] [::1]:49154 Closing
+[Tue Feb 24 20:01:01 2026] [::1]:57575 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Feb 24 20:01:01 2026] [::1]:57575 Closing
+[Tue Feb 24 20:02:58 2026] [::1]:60293 Accepted
+[Tue Feb 24 20:02:58 2026] [::1]:58842 Accepted
+[Tue Feb 24 20:03:02 2026] [::1]:60293 [200]: GET /login
+[Tue Feb 24 20:03:02 2026] [::1]:60293 Closing
+[Tue Feb 24 20:03:02 2026] [::1]:58842 [200]: GET //views/templates/css/style.css
+[Tue Feb 24 20:03:02 2026] [::1]:58842 Closing
+[Tue Feb 24 20:07:13 2026] [::1]:50191 Accepted
+[Tue Feb 24 20:07:13 2026] [::1]:65093 Accepted
+[Tue Feb 24 20:07:17 2026] [::1]:50191 [200]: GET /login
+[Tue Feb 24 20:07:17 2026] [::1]:50191 Closing
+[Tue Feb 24 20:07:17 2026] [::1]:65093 [200]: GET //views/templates/css/style.css
+[Tue Feb 24 20:07:18 2026] [::1]:65093 Closing
+[Tue Feb 24 20:07:33 2026] [::1]:51138 Accepted
+[Tue Feb 24 20:07:46 2026] [::1]:52220 Accepted
+[Tue Feb 24 20:07:46 2026] [::1]:51163 Accepted
+[Tue Feb 24 20:07:50 2026] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(25): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(194): CardapioController->index()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:07:50 2026] [::1]:52220 [200]: GET /cardapio-adm - Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(25): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(194): CardapioController->index()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:07:50 2026] [::1]:52220 Closing
+[Tue Feb 24 20:07:53 2026] [::1]:53727 Accepted
+[Tue Feb 24 20:08:01 2026] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\ReservaModel.php:21
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\ReservaController.php(35): Reserva->getAllReservas()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(194): ReservaController->adm()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\ReservaModel.php on line 21
+[Tue Feb 24 20:08:01 2026] [::1]:51163 [200]: GET /reserva/adm - Uncaught Error: Call to a member function prepare() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\ReservaModel.php:21
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\ReservaController.php(35): Reserva->getAllReservas()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(194): ReservaController->adm()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\ReservaModel.php on line 21
+[Tue Feb 24 20:08:01 2026] [::1]:51163 Closing
+[Tue Feb 24 20:08:13 2026] [::1]:53294 Accepted
+[Tue Feb 24 20:08:13 2026] [::1]:53727 [302]: GET /sair
+[Tue Feb 24 20:08:13 2026] [::1]:53727 Closing
+[Tue Feb 24 20:08:17 2026] [::1]:53294 [200]: GET /login
+[Tue Feb 24 20:08:17 2026] [::1]:53294 Closing
+[Tue Feb 24 20:08:18 2026] [::1]:58184 Accepted
+[Tue Feb 24 20:08:18 2026] [::1]:58184 [200]: GET //views/templates/css/style.css
+[Tue Feb 24 20:08:18 2026] [::1]:58184 Closing
+[Tue Feb 24 20:10:15 2026] [::1]:51138 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Feb 24 20:10:15 2026] [::1]:51138 Closing
+[Tue Feb 24 20:59:13 2026] [::1]:52057 Accepted
+[Tue Feb 24 20:59:17 2026] [::1]:61875 Accepted
+[Tue Feb 24 20:59:17 2026] [::1]:51499 Accepted
+[Tue Feb 24 20:59:25 2026] PHP Warning:  Undefined property: ReservaController::$baseUrl in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\ReservaController.php on line 25
+[Tue Feb 24 20:59:25 2026] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\views\ReservaView.php on line 4
+[Tue Feb 24 20:59:25 2026] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\views\ReservaView.php on line 5
+[Tue Feb 24 20:59:25 2026] [::1]:61875 [200]: GET /reserva
+[Tue Feb 24 20:59:25 2026] [::1]:61875 Closing
+[Tue Feb 24 20:59:25 2026] [::1]:63365 Accepted
+[Tue Feb 24 20:59:29 2026] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:59:29 2026] [::1]:51499 [500]: GET /cardapio - Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:59:29 2026] [::1]:51499 Closing
+[Tue Feb 24 20:59:32 2026] [::1]:61280 Accepted
+[Tue Feb 24 20:59:40 2026] PHP Warning:  Undefined property: ReservaController::$baseUrl in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\ReservaController.php on line 25
+[Tue Feb 24 20:59:40 2026] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\views\ReservaView.php on line 4
+[Tue Feb 24 20:59:40 2026] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\views\ReservaView.php on line 5
+[Tue Feb 24 20:59:40 2026] [::1]:63365 [200]: GET /reserva
+[Tue Feb 24 20:59:40 2026] [::1]:63365 Closing
+[Tue Feb 24 20:59:40 2026] [::1]:53027 Accepted
+[Tue Feb 24 20:59:48 2026] PHP Warning:  Undefined property: ReservaController::$baseUrl in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\ReservaController.php on line 25
+[Tue Feb 24 20:59:48 2026] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\views\ReservaView.php on line 4
+[Tue Feb 24 20:59:48 2026] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\views\ReservaView.php on line 5
+[Tue Feb 24 20:59:48 2026] [::1]:61280 [200]: GET /reserva
+[Tue Feb 24 20:59:48 2026] [::1]:61280 Closing
+[Tue Feb 24 20:59:48 2026] [::1]:57988 Accepted
+[Tue Feb 24 20:59:48 2026] [::1]:53027 [200]: GET /pizzas
+[Tue Feb 24 20:59:48 2026] [::1]:53027 Closing
+[Tue Feb 24 20:59:48 2026] [::1]:51384 Accepted
+[Tue Feb 24 20:59:52 2026] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:59:52 2026] [::1]:57988 [500]: GET /cardapio - Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:59:52 2026] [::1]:57988 Closing
+[Tue Feb 24 20:59:52 2026] [::1]:59051 Accepted
+[Tue Feb 24 20:59:56 2026] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:59:56 2026] [::1]:51384 [500]: GET /cardapio - Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 20:59:56 2026] [::1]:51384 Closing
+[Tue Feb 24 20:59:56 2026] [::1]:55017 Accepted
+[Tue Feb 24 21:00:01 2026] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 21:00:01 2026] [::1]:59051 [500]: GET /cardapio - Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 21:00:01 2026] [::1]:59051 Closing
+[Tue Feb 24 21:00:01 2026] [::1]:61681 Accepted
+[Tue Feb 24 21:00:05 2026] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 21:00:05 2026] [::1]:55017 [500]: GET /cardapio - Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 21:00:05 2026] [::1]:55017 Closing
+[Tue Feb 24 21:00:05 2026] [::1]:50703 Accepted
+[Tue Feb 24 21:00:09 2026] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 21:00:09 2026] [::1]:61681 [500]: GET /cardapio - Uncaught Error: Call to a member function query() on null in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php:25
+Stack trace:
+#0 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\controllers\CardapioController.php(37): Cardapio->getCardapio()
+#1 C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\index.php(206): CardapioController->ver_cardapio()
+#2 {main}
+  thrown in C:\Users\Luis\Documents\PROJETOS\restaurante-mvc\models\CardapioModel.php on line 25
+[Tue Feb 24 21:00:09 2026] [::1]:61681 Closing
+[Tue Feb 24 21:02:18 2026] [::1]:50703 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Feb 24 21:02:18 2026] [::1]:50703 Closing
+[Tue Feb 24 21:02:18 2026] [::1]:52057 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Feb 24 21:02:18 2026] [::1]:52057 Closing

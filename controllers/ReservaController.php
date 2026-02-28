@@ -8,7 +8,8 @@ class ReservaController
   # url é uma propriedade pois está sendo criada dentro da classe
   # criar uma propriedade que receba o endereço absoluto do site
   # este endereço será usado para compor as rotas
-  public $baseUrl = "http://localhost:8080";
+
+  private $baseUrl;
   private $reservaModel;
   private $mesaModel;
 
@@ -17,6 +18,7 @@ class ReservaController
     # instancia as classes para obter os dados dos models
     $this->reservaModel = new Reserva();
     $this->mesaModel = new Mesa();
+    $this->baseUrl = BASE_URL;
   }
 
   # Página pública de reservas
